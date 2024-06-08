@@ -20,9 +20,8 @@ This project is a data visualization dashboard that provides insights into vario
   - City
 
 ### Dashboard Overview
-![image](https://github.com/pravesh2892/Blackcoffer_assignment/assets/112716122/f883809d-e46c-4780-8c50-ea480e2b4e65)
 ![image](https://github.com/pravesh2892/Blackcoffer_assignment/assets/112716122/a1b112af-99af-4b32-8f19-2da62feedeed)
-
+![image](https://github.com/pravesh2892/Blackcoffer_assignment/assets/112716122/f883809d-e46c-4780-8c50-ea480e2b4e65)
 
 *This is the main view of the dashboard, showcasing various charts and filters.*
 
@@ -84,22 +83,21 @@ Before you begin, ensure you have the following installed:
 - Make sure MongoDB is running on your local machine.
 - In the `backend` directory, create a `.env` file with your MongoDB connection string:
   ```
-  MONGODB_URI=mongodb://localhost:27017/datavizdashboard
+  MONGODB_URI=mongodb+srv://{your user name}:<password>@cluster0.ykispip.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   ```
 
 4. Import data into MongoDB:
 - Place the `jsondata.json` file in the `backend/data` directory.
 - Run the data import script:
   ```
-  cd backend
-  node scripts/importData.js
+
   ```
 
 ## Running the Application
 
 1. Start the backend server:
 
-The server will run on `http://localhost:5000`.
+The server will run on `http://localhost:3015`.
 
 2. Start the frontend development server:
 
@@ -109,27 +107,18 @@ The React app will run on `http://localhost:3000`.
 
 ## API Endpoints
 
-- `GET /api/data`: Fetches all data from the MongoDB database.
-- `GET /api/data/filters`: Fetches available filter options (topics, sectors, regions, etc.).
+- `GET /data`: Fetches all data from the MongoDB database.
 
-For more detailed API documentation, refer to the `backend/README.md` file.
+
+
 
 ## Tech Stack
 
-- **Frontend**: React, D3.js
-- **Backend**: Node.js, Express.js
+- **Frontend**: React, react-chartjs-2 , @chakra-ui
+- **Backend**: Node.js, Express.js, nodemon, dotenv, mongoose
 - **Database**: MongoDB
 - **Additional Libraries**: Axios (for API calls), React Router (for routing)
 
-## Contributing
 
-Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
 
-This project is open-source and available under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Data provided as part of the assignment
-- Inspiration from various data visualization dashboards and tutorials
